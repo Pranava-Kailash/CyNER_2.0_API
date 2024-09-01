@@ -3,3 +3,5 @@ sqlalchemy==1.4.27
 uvicorn==0.17.6
 jupyter==1.0.0
 requests==2.27.1
+transformers==4.12.2
+datasets==1.14.0
