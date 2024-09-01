@@ -1,0 +1,5 @@
+fastapi==0.78.0
+sqlalchemy==1.4.27
+uvicorn==0.17.6
+jupyter==1.0.0
+requests==2.27.1
