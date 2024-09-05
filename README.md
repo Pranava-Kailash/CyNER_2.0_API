@@ -112,8 +112,7 @@ The main output of the project is the API response that includes identified enti
 
 ## Additional Notes
 
-- **Customization**: You can modify the NER model and retrain it as per your needs by modifying the `model.py` and using the `Ner_tags_finder.ipynb` for experimentation.
-- **Database**: If you need to persist more data, consider expanding the schema in `ner_data.db`.
+- **Database**: If you need to persist more data, consider expanding the schema in `schemas.py`.
 - **Performance**: For deployment in a production environment, consider using a more robust database like PostgreSQL and deploying the application using a WSGI server.
 
 ## License
