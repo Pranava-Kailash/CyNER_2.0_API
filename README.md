@@ -24,10 +24,10 @@ Depolyment/
 - `__init__.py`: Indicates that the directory is a Python package.
 - `database.py`: Handles database connections and interactions.
 - `main.py`: The main entry point of the application, responsible for starting the FastAPI server.
-- `model.py`: Contains the model definitions and business logic for NER.
-- `ner_data.db`: SQLite database containing the data for NER.
-- `Ner_tags_finder.ipynb`: Jupyter Notebook used for testing and developing the NER models.
-- `routers/ner.py`: Contains the API routes related to NER functionalities.
+- `model.py`: Contains Base for SQLalchemy
+- `ner_data.db`: SQLite database containing the data saved after running NER.
+- `Ner_tags_finder.ipynb`: Jupyter Notebook used for testing the API endpoints.
+- `routers/ner.py`: Contains the model definitions and logic for NER.
 - `schemas.py`: Contains Pydantic models used for data validation and serialization.
 
 ## Requirements
@@ -108,7 +108,7 @@ Once the server is running, you can test the API with the following example:
 
 ## Expected Output
 
-The main output of the project is the API response that includes identified entities in the input text along with their corresponding labels (e.g., B-System, B-Organization).
+The main output of the project is the API response that includes identified entities in the input text along with their corresponding labels (e.g., B-System, B-Organization) and a tagged sentence with its corresponding tags.
 
 ## Additional Notes
 
