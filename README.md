@@ -1,7 +1,9 @@
 
 # CyNER 2.0: Named Entity Recognizer
 
-CyNER 2.0 is an advanced Named Entity Recognition (NER) application designed to identify and categorize named entities in text, such as organizations, locations, malware, and more. The application is built with Python, using FastAPI for serving the NER model as an API.
+CyNER 2.0 is an advanced Named Entity Recognition (NER) application designed to identify and categorize named entities in text, such as organizations, locations, malware, and more. The application is built with Python, using FastAPI for serving the NER model as an API. The model was developed as part of my MSc Data Science dissertation at the University of Surrey.
+
+The project utilizes state-of-the-art pre-trained transformer models, including DeBERTa, BERT, BioBERT, DarkBERT, and SpaCy. After rigorous testing and evaluation, DeBERTa emerged as the top-performing model with an F1 score of over 91%, making it the core model for CyNER 2.0.
 
 ## Project Structure
 
@@ -18,6 +20,42 @@ Depolyment/
 │   └── ner.py
 └── schemas.py
 ```
+## Key Features
+**Advanced NER for Cybersecurity**: CyNER 2.0 is specifically fine-tuned to recognize cybersecurity-specific entities such as malware, vulnerabilities, threat actors, systems, and organizations.
+
+**Model Evaluation**: Multiple pre-trained transformer models were tested, and DeBERTa was selected as the best-performing model based on precision, recall, and F1 scores.
+
+**API Deployment**: The project is deployed as an API using FastAPI, making it easy to integrate the NER model into various cybersecurity platforms or applications.
+
+**Dataset Annotation**: The Annotated Dataset used for training and evaluation was created with The Annotator, a custom-built tool that facilitated the annotation of over 11,000 rows of cybersecurity data.
+
+## Testing & Model Evaluation
+### Models Tested:
+- **BERT**: A widely-used transformer model effective in general-purpose NER tasks.
+- **DeBERTa**: Achieved the highest performance on the cybersecurity dataset with an F1 score of over 91%.
+- **BioBERT**: Specialized for biomedical data but showed promising results in cybersecurity tasks due to the structured nature of its output.
+- **DarkBERT**: Trained on dark web datasets, useful in identifying threat actors and malware.
+- **SpaCy NER**: A fast, lightweight model that offers practical usage with moderate performance.
+
+## Testing Results:
+### Original Dataset Performance:
+- DeBERTa F1 score: 91.30%
+- BERT F1 score: 88.50%
+- DarkBERT F1 score: 87.10%
+
+### Augmented Dataset Performance:
+- DeBERTa F1 score: 91.88%
+- BERT F1 score: 89.23%
+- DarkBERT F1 score: 88.30%
+
+These results indicate that DeBERTa consistently outperforms the other models, both on the original and augmented datasets.
+
+## Statistical Testing:
+Wilcoxon Signed-Rank Test and Bootstrap Resampling were applied to assess the statistical significance of the performance differences between the models.
+
+DeBERTa outperformed the other models with a statistically significant difference. DeBERTa was chosen as the model for Endpoint development
+
+Model uploaded @ [Hugging Face](https://huggingface.co/PranavaKailash/CyNER-2.0-DeBERTa-v3-base)
 
 ### Files Description
 
